@@ -1,47 +1,46 @@
 package br.ce.wcaquino.tasksfrontend.model;
 
-import java.time.LocalDate;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.time.LocalDate;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Todo {
 
-	private Long id;
-	private String task;
-	@DateTimeFormat(pattern="dd/MM/yyyy")
-	private LocalDate dueDate;
-	
-	public Long getId() {
-		return id;
-	}
+    private Long id;
+    private String description;
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dueDate;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getTask() {
-		return task;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setTask(String task) {
-		this.task = task;
-	}
-	
-	public LocalDate getDueDate() {
-		return dueDate;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setDueDate(LocalDate dueDate) {
-		this.dueDate = dueDate;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	@Override
-	public String toString() {
-		return "Todo [id=" + id + ", task=" + task + ", dueDate=" + dueDate + "]";
-	}
-	
-	
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Todo [id=" + id + ", description=" + description + ", dueDate=" + dueDate + "]";
+    }
+
+
 }
