@@ -4,6 +4,7 @@ import br.ce.wcaquino.tasksfrontend.model.Todo;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,6 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties.StubsMode;
 
+@Ignore
 @AutoConfigureStubRunner(stubsMode = StubsMode.LOCAL, ids = "br.ce.wcaquino:tasks-backend:+:stubs:8091")
 @SpringBootTest
 @RunWith(SpringRunner.class)
